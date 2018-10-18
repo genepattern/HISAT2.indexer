@@ -5,7 +5,6 @@ params:
     "index.name": genomeNoGtf
 assertions:
     jobStatus: success
-    #Does not work from Jenkins - but may work locally
     diffCmd: ./diffzip.sh
     files:
         genomeNoGtf.zip:

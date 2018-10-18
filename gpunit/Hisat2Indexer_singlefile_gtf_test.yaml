@@ -7,8 +7,7 @@ params:
     "output.prefix": mapped
 assertions:
     jobStatus: success
-    #Does not work from Jenkins - but may work locally
-    #diffCmd: ./diffzip.sh
-    #files:
-        #genome.zip:
-            #diff: ./expected_outputs/genome.1.zip
+    diffCmd: ./diffzip.sh
+    files:
+        genome.zip:
+            diff: ./expected_outputs/genome.1.zip
