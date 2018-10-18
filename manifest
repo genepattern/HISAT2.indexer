@@ -3,7 +3,7 @@
 #Thu Feb 01 19:27:22 UTC 2018
 taskDoc=doc.html
 JVMLevel=
-LSID=urn\:lsid\:broad.mit.edu\:cancer.software.genepattern.module.analysis\:00368\:0.1
+LSID=urn\:lsid\:broad.mit.edu\:cancer.software.genepattern.module.analysis\:00368\:999999999
 author=Ted Liefeld;UCSD
 categories=RNA-Seq
 commandLine=python <libdir>/hisat_indexer_wrapper.py <gtf.file> -fasta <fasta.file> -indexname <index.name> -dryRun <dry.run>
