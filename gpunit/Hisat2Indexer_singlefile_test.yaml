@@ -6,7 +6,7 @@ params:
 assertions:
     jobStatus: success
     #Does not work from Jenkins - but may work locally
-    #diffCmd: ./diffzip.sh
-    #files:
-        #genomeNoGtf.zip:
-            #diff: ./expected_outputs/genome.3.zip
+    diffCmd: ./diffzip.sh
+    files:
+        genomeNoGtf.zip:
+            diff: ./expected_outputs/genome.3.zip
