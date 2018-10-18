@@ -127,7 +127,7 @@ if __name__ == '__main__':
 
     extractExons()
     extractHaplotyoes()
-
+    retval = 0
     revised_command = generate_command()
     # now call it passing along the same environment we got
     if dryRun:
@@ -154,8 +154,8 @@ if __name__ == '__main__':
         subprocess.call("rm ss.txt", shell=True, env=os.environ)
     if os.path.exists("exons.txt"):
         subprocess.call("rm exons.txt", shell=True, env=os.environ)
-
-
+    
+    sys.exit(retval)
 
 
 
