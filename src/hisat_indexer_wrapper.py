@@ -4,6 +4,7 @@ import sys
 from io import StringIO
 import os
 import subprocess
+from subprocess import PIPE, STDOUT
 import time
 
 
@@ -126,13 +127,25 @@ if __name__ == '__main__':
 
     extractExons()
     extractHaplotyoes()
-
+    retval = 0
     revised_command = generate_command()
     # now call it passing along the same environment we got
     if dryRun:
         print(revised_command)
     else:
-        subprocess.call(revised_command, shell=True, env=os.environ)
+        
+        childProcess = subprocess.Popen(revised_command, shell=True, env=os.environ, stdout=PIPE, stderr=PIPE)
+        stdout, stderr = childProcess.communicate()
+        retval = childProcess.returncode
+        if (retval != 0):
+		# if non-zero return, print stderr to stderr
+                print( stdout ) 
+ 		print  >> sys.stderr, stderr
+	else:
+		# if not a non-zero stdout, print stderr to stdout since Hisat2Indexer logs non-error
+		# stuff to stderr.  Downside is the stderr and stdout are not interlevened
+		print(stdout)
+		print(stderr)
 
     subprocess.call("zip "+indexBaseName+".zip *.ht2", shell=True, env=os.environ)
 
@@ -141,8 +154,8 @@ if __name__ == '__main__':
         subprocess.call("rm ss.txt", shell=True, env=os.environ)
     if os.path.exists("exons.txt"):
         subprocess.call("rm exons.txt", shell=True, env=os.environ)
-
-
+    
+    sys.exit(retval)
 
 
 

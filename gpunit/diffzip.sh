@@ -1,5 +1,6 @@
 #!/bin/bash
 # set up a temp dir structure to unzip into
+
 rm -rf zipTmp
 mkdir zipTmp
 mkdir zipTmp/dir1

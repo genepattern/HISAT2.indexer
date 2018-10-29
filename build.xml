@@ -12,4 +12,12 @@
     <antcall target="postzip"/>
 </target>
 
+<target name="create-zip-2">
+    <zip destfile="${ant.project.name}.zip" whenempty="fail" defaultexcludes="true">
+        <fileset dir="." includes="*.html, manifest"/>
+        <zipfileset dir="src" includes="*.py"/>
+    </zip>
+</target>
+
+
 </project>

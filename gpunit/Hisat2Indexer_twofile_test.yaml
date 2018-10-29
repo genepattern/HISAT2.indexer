@@ -2,7 +2,7 @@ name: testHisat2Indexer_twofile
 module: Hisat2Indexer
 params: 
     "fasta.file": ["https://datasets.genepattern.org/data/test_data/Hisat2/reads_1.fa","https://datasets.genepattern.org/data/test_data/Hisat2/reads_2.fa"] 
-    "index.name": genome
+    "index.name.prefix": genome
     "gtf.file": https://datasets.genepattern.org/data/test_data/Hisat2/Homo_sapiens_hg19_UCSC.gtf
     "output.prefix": mapped
 assertions:
