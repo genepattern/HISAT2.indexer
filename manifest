@@ -1,5 +1,5 @@
 #Mon, 12 Feb 2018 11:24:10 -0800
-#Hisat2Indexer
+#HISAT2Indexer
 #Thu Feb 01 19:27:22 UTC 2018
 taskDoc=doc.html
 JVMLevel=
@@ -8,7 +8,7 @@ author=Ted Liefeld;UCSD
 categories=RNA-Seq
 commandLine=python <libdir>/hisat_indexer_wrapper.py <gtf.file> -fasta <fasta.file> -indexname <index.name.prefix> -dryRun <dry.run>
 cpuType=any
-description=Indexes one or more Fasta files for use in the Hisat2Aligner.  
+description=Indexes one or more Fasta files for use in the HISAT2Aligner.  
 fileFormat=
 language=any
 job.docker.image=genepattern/docker-hisat2:v0.12
