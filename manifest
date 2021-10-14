@@ -2,6 +2,7 @@
 #HISAT2Indexer
 #Thu Feb 01 19:27:22 UTC 2018
 taskDoc=doc.html
+documentationUrl=https://genepattern.github.io/HISAT2Indexer/
 JVMLevel=
 LSID=urn\:lsid\:broad.mit.edu\:cancer.software.genepattern.module.analysis\:00368\:999999999
 author=Ted Liefeld;UCSD
