@@ -142,7 +142,7 @@ if __name__ == '__main__':
                 print( stdout ) 
  		print  >> sys.stderr, stderr
 	else:
-		# if not a non-zero stdout, print stderr to stdout since Hisat2Indexer logs non-error
+		# if not a non-zero stdout, print stderr to stdout since HISAT2.indexer logs non-error
 		# stuff to stderr.  Downside is the stderr and stdout are not interlevened
 		print(stdout)
 		print(stderr)
