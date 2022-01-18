@@ -1,4 +1,4 @@
-name: testHISAT2.indexer_single
+name: testHISAT2.indexer_single_gtf
 module: HISAT2.indexer
 params: 
     "fasta.file": https://datasets.genepattern.org/data/test_data/Hisat2/reads_1.fa 
