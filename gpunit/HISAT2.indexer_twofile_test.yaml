@@ -1,13 +1,9 @@
-name: testHisat2Indexer_single
+name: testHISAT2.indexer_twofile
 module: HISAT2.indexer
 params: 
-    "fasta.file": https://datasets.genepattern.org/data/test_data/Hisat2/reads_1.fa 
+    "fasta.file": ["https://datasets.genepattern.org/data/test_data/Hisat2/reads_1.fa","https://datasets.genepattern.org/data/test_data/Hisat2/reads_2.fa"] 
     "index.name.prefix": genome
     "gtf.file": https://datasets.genepattern.org/data/test_data/Hisat2/Homo_sapiens_hg19_UCSC.gtf
     "output.prefix": mapped
 assertions:
     jobStatus: success
-    diffCmd: ./diffzip.sh
-    files:
-        genome.zip:
-            diff: ./expected_outputs/genome.1.zip
