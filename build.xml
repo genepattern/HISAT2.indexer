@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project basedir="" default="create-zip" name="Hisat2Indexer">
+<project basedir="" default="create-zip" name="HISAT2.indexer">
 <property name="dirOffset" value="../common_module_code" />
 <import file="${dirOffset}/commontargets.xml" />
 
 <target name="create-zip" depends="init">
     <antcall target="prezip"/>
     <zip destfile="${dest.dir}/${ant.project.name}.zip" whenempty="fail" defaultexcludes="true">
-        <fileset dir="." includes="*.html, manifest"/>
+        <fileset dir="." includes="manifest, Dockerfile, LICENSE"/>
         <zipfileset dir="src" includes="*.py"/>
     </zip>
     <antcall target="postzip"/>
@@ -14,7 +14,7 @@
 
 <target name="create-zip-2">
     <zip destfile="${ant.project.name}.zip" whenempty="fail" defaultexcludes="true">
-        <fileset dir="." includes="*.html, manifest"/>
+        <fileset dir="." includes="manifest, Dockerfile, LICENSE"/>
         <zipfileset dir="src" includes="*.py"/>
     </zip>
 </target>
